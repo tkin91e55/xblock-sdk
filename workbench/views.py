@@ -92,9 +92,10 @@ def user_list(_request):
     """
     # We'd really like to do .distinct, but sqlite+django does not support this;
     # hence the hack with sorted(set(...))
+    # __import__('pdb').set_trace()
     users = sorted(
         user_id[0]
-        for user_id in set(XBlockState.objects.values_list('user_id'))
+        for user_id in set(XBlockState.objects.values_list('user_id').filter(user_id__isnull=False))
     )
     return JsonResponse(users, safe=False)
 

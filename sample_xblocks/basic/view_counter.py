@@ -24,6 +24,16 @@ class ViewCounter(XBlock):
         frag = Fragment(html)
         return frag
 
+    @staticmethod
+    def workbench_scenarios():
+        """
+        Define default workbench scenarios
+        """
+        return [
+            ("View Counter", "<view_counter_demo/>")
+        ]
+
+
 
 VIEW_COUNTER_TEMPLATE = """
 <span class="views">{views}</span>

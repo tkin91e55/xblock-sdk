@@ -33,7 +33,7 @@ class AllScopesBlock(XBlock):
     """
     content_field = String(
         scope=Scope.content,
-        default="This is content!",
+        default="This is content 2!",
         help=(
             "The content scope is used to save data for all users, for one "
             "particular block, across all runs of a course. An example might "

@@ -133,6 +133,7 @@ setup(
     entry_points={
         'xblock.v1': [
             # Basic XBlocks
+            # thsese for <problem_demo> tags for rendering fragment
             'helloworld_demo = sample_xblocks.basic.content:HelloWorldBlock',
             'allscopes_demo = sample_xblocks.basic.content:AllScopesBlock',
             'html_demo = sample_xblocks.basic.content:HtmlBlock',
